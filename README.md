@@ -98,7 +98,8 @@
 1. clone https://github.com/huchenhui1/blog-vue.git
 2. 用WebStore打开
 3. 在项目根路径下命令行执行`npm install`，npm会根据`package.json`中对各种依赖的定义去安装依赖
-4. 命令行执行`npm run dev`启动前端
+4. 命令行执行`npm run dev`启动前端（或者配运行环境Edit Configurations）
+5. 安装redis？设置都默认（原后台用了Redis存储Session，如在注册登录时）
 
 ### 项目结构说明
 
@@ -138,3 +139,5 @@
 ![image-20201023164733068](C:\Users\HuChenhui\AppData\Roaming\Typora\typora-user-images\image-20201023164733068.png)
 
 ### Vue文件
+
+### 每次访问页面发生的事情，几个JS文件的作用
