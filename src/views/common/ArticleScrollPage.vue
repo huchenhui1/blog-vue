@@ -1,6 +1,7 @@
 <template>
   <scroll-page :loading="loading" :offset="offset" :no-data="noData" v-on:load="load">
-    <article-item v-for="a in articles" :key="a.id" v-bind="a"></article-item>
+    <article-item v-for="a in articles" :key="a.article_id" article="a"></article-item>
+<!--    <article-item v-for="a in articles" :key="a.article_id" v-bind="a"></article-item>-->
   </scroll-page>
 </template>
 
@@ -57,7 +58,7 @@
       return {
         loading: false,//是否正在加载，传入<scroll-page>，显示相应页面
         noData: false,//是否有文章数据，传入<scroll-page>，显示相应页面
-        innerPage: {//用于分页？
+        innerPage: {//用于分页
           pageSize: 5,
           pageNumber: 1,
           name: 'a.createDate',
@@ -73,6 +74,30 @@
       view(id) {
         this.$router.push({path: `/view/${id}`})
       },
+      //先不分页
+      getArticles() {
+        let that = this
+        that.loading = true //正在加载标志位
+
+        getArticles().then(data => {
+
+          let newArticles = data.data
+          if (newArticles && newArticles.length > 0) {
+            that.articles = newArticles
+          } else {
+            that.noData = true
+          }
+
+        }).catch(error => {
+          if (error !== 'error') {
+            that.$message({type: 'error', message: '文章加载失败!', showClose: true})
+          }
+        }).finally(() => {
+          that.loading = false //正在加载标志位置false
+        })
+
+      }
+      /*
       getArticles() {
         let that = this
         that.loading = true //正在加载标志位
@@ -96,6 +121,7 @@
         })
 
       }
+      */
     },
     //注册Vue组件
     components: {

@@ -4,32 +4,32 @@
 <!--    文章header-->
     <div class="me-article-header">
 <!--      标题-->
-      <a @click="view(id)" class="me-article-title">{{title}}</a>
-      <el-button v-if="weight > 0" class="me-article-icon" type="text">置顶</el-button>
+      <a @click="view(article.article_id)" class="me-article-title">{{article.article_title}}</a>
+<!--      <el-button v-if="weight > 0" class="me-article-icon" type="text">置顶</el-button>-->
 <!--      评论数 位置不知道在哪-->
       <span class="me-pull-right me-article-count">
-	    	<i class="me-icon-comment"></i>&nbsp;{{commentCounts}}
+	    	<i class="me-icon-comment"></i>&nbsp;{{article.article_commentcount}}
 	    </span>
 <!--      浏览量-->
       <span class="me-pull-right me-article-count">
-	    	<i class="el-icon-view"></i>&nbsp;{{viewCounts}}
+	    	<i class="el-icon-view"></i>&nbsp;{{article.article_viewcount}}
 	    </span>
     </div>
 <!--    文章摘要-->
     <div class="me-artile-description">
-      {{summary}}
+      {{article.article_content}}
     </div>
 <!--    文章footer-->
     <div class="me-article-footer">
 <!--      用户名-->
-	  	<span class="me-article-author">
-	    	<i class="me-icon-author"></i>&nbsp;{{author.nickname}}
-	    </span>
+<!--	  	<span class="me-article-author">-->
+<!--	    	<i class="me-icon-author"></i>&nbsp;{{author.nickname}}-->
+<!--	    </span>-->
 <!--      标签-->
-      <el-tag v-for="t in tags" :key="t.tagname" size="mini" type="success">{{t.tagname}}</el-tag>
+<!--      <el-tag v-for="t in tags" :key="t.tagname" size="mini" type="success">{{t.tagname}}</el-tag>-->
 <!--      发布时间-->
       <span class="me-pull-right me-article-count">
-	    	<i class="el-icon-time"></i>&nbsp;{{createDate | format}}
+	    	<i class="el-icon-time"></i>&nbsp;{{article.article_time | format}}
 	    </span>
 
     </div>
@@ -43,15 +43,16 @@
     name: 'ArticleItem',
     //从父组件ArticleScrollPage传入的参数
     props: {
-      id: Number,
-      weight: Number,
-      title: String,
-      commentCounts: Number,
-      viewCounts: Number,
-      summary: String,
-      author: Object,
-      tags: Array,
-      createDate: String
+      article:Object
+      // id: Number,
+      // weight: Number,
+      // title: String,
+      // commentCounts: Number,
+      // viewCounts: Number,
+      // summary: String,
+      // author: Object,
+      // tags: Array,
+      // createDate: String
     },
     data() {
       return {}

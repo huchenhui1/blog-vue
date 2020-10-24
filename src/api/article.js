@@ -1,6 +1,13 @@
 import request from '@/request'
 
-
+//先不分页
+export function getArticles(query, page) {
+  return request({
+    url: '/articles',
+    method: 'get',
+  })
+}
+/*
 export function getArticles(query, page) {
   return request({
     url: '/articles',
@@ -18,7 +25,7 @@ export function getArticles(query, page) {
     }
   })
 }
-
+ */
 export function getHotArtices() {
   return request({
     url: '/articles/hot',
