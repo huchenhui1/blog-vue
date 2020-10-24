@@ -25,9 +25,10 @@ Object.defineProperty(Vue.prototype, '$_', { value: lodash })
 Vue.directive('title',  function (el, binding) {
   document.title = el.dataset.title
 })
-// 格式话时间
+// 格式化时间
 Vue.filter('format', formatTime)
 
+//注入 根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到
 new Vue({
   el: '#app',
   router,

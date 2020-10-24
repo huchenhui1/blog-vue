@@ -78,7 +78,7 @@
     //计算属性
     computed: {
       user() {
-        //登录状态 true or false    $store看不懂
+        //登录状态 true or false    $store从store中取state
         let login = this.$store.state.account.length != 0
         let avatar = this.$store.state.avatar
         return {
@@ -87,10 +87,12 @@
       }
     },
     methods: {
-      //登出方法  看不懂
+      //登出方法
       logout() {
         let that = this
+        //调用store中的logout方法
         this.$store.dispatch('logout').then(() => {
+          //logout方法执行后，是store中state清空，跳转到/主页
           this.$router.push({path: '/'})
         }).catch((error) => {
           if (error !== 'error') {

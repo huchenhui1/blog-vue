@@ -1,3 +1,4 @@
+// localStorage是一个浏览器对象，能存储数据
 export function getToken() {
   return localStorage.token
 }

@@ -95,7 +95,10 @@
 
 ### 博客前端项目Git仓库
 
-https://github.com/huchenhui1/blog-vue.git
+1. clone https://github.com/huchenhui1/blog-vue.git
+2. 用WebStore打开
+3. 在项目根路径下命令行执行`npm install`，npm会根据`package.json`中对各种依赖的定义去安装依赖
+4. 命令行执行`npm run dev`启动前端
 
 ### 项目结构说明
 
@@ -109,9 +112,9 @@ https://github.com/huchenhui1/blog-vue.git
   - `markdown`：文章编辑组件
   - `scrollpage`：首页显示文章列表的组件
   - `BaseFooter.vue`：footer栏组件
-- `request`：登陆权限相关？
-- `router`：配路由，home.vue中的`<router-view>`根据`router/index.js`加载页面
-- `store`：登陆权限相关？
+- `request`：request拦截器和respone拦截器
+- `router`：配路由，home.vue中的`<router-view>`根据`router/index.js`加载页面，全局前置守卫
+- `store`：存储全局用的数据
 - `utils`：工具js函数
 - `view`：vue页面
   - `blog`

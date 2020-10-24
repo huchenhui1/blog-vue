@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d746e8c8-4100-4b0b-9ba2-484335260bdc" name="Default Changelist" comment="first add">
-      <change afterPath="$PROJECT_DIR$/README_old.md" afterDir="false" />
+    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/token.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/token.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/mutation-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/mutation-types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BaseHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BaseHeader.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,118 +20,139 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ikvfYPm6IR7dKUjUXrcfP0HYxI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1jHKvLtNSlOwECMAYHoY5988kEh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d746e8c8-4100-4b0b-9ba2-484335260bdc" name="Default Changelist" comment="" />
-      <created>1602464508376</created>
+      <changelist id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="" />
+      <created>1603455807708</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1602464508376</updated>
-      <workItem from="1602464509413" duration="2142000" />
-      <workItem from="1602749537133" duration="8095000" />
-      <workItem from="1602908066208" duration="591000" />
-      <workItem from="1603018321098" duration="988000" />
-      <workItem from="1603256782397" duration="134000" />
-      <workItem from="1603334757843" duration="6873000" />
-      <workItem from="1603327377733" duration="9265000" />
-      <workItem from="1603375130580" duration="232000" />
-      <workItem from="1603375374519" duration="5815000" />
+      <updated>1603455807708</updated>
+      <workItem from="1603455809081" duration="13943000" />
     </task>
-    <task id="LOCAL-00001" summary="first add">
-      <created>1603424973127</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603424973127</updated>
-    </task>
-    <task id="LOCAL-00002" summary="first add">
-      <created>1603425894062</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1603425894062</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
-    <MESSAGE value="first add" />
-    <option name="LAST_COMMIT_MESSAGE" value="first add" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="1024" y="278" key="FileChooserDialogImpl" timestamp="1603376447735">
+    <state x="414" y="175" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603458301121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1024" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603376447735" />
-    <state width="1288" height="279" key="GridCell.Tab.0.bottom" timestamp="1602502437772">
+    <state x="414" y="175" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603458301121" />
+    <state width="1899" height="219" key="GridCell.Tab.0.bottom" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602502437772" />
-    <state width="1288" height="279" key="GridCell.Tab.0.center" timestamp="1602502437772">
+    <state width="1899" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.0.center" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602502437772" />
-    <state width="1288" height="279" key="GridCell.Tab.0.left" timestamp="1602502437771">
+    <state width="1899" height="219" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.0.left" timestamp="1603504546621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602502437771" />
-    <state width="1288" height="279" key="GridCell.Tab.0.right" timestamp="1602502437772">
+    <state width="1899" height="219" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546621" />
+    <state width="1899" height="219" key="GridCell.Tab.0.right" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602502437772" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1603376453776">
+    <state width="1899" height="219" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.1.bottom" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603376453776" />
-    <state x="914" y="327" key="Vcs.Push.Dialog.v2" timestamp="1603425903252">
+    <state width="1899" height="219" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.1.center" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="914" y="327" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603425903252" />
-    <state x="778" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1603375271475">
+    <state width="1899" height="219" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.1.left" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="778" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603375271475" />
-    <state x="867" y="242" key="run.anything.popup" timestamp="1603357591645">
+    <state width="1899" height="219" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.1.right" timestamp="1603504546622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="867" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603357591645" />
+    <state width="1899" height="219" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.2.bottom" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.2.center" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.2.left" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.2.right" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.3.bottom" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.3.center" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.3.left" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state width="1899" height="219" key="GridCell.Tab.3.right" timestamp="1603504546622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="219" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603504546622" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1603504544558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603504544558" />
+    <state x="1050" y="223" width="596" height="594" key="find.popup" timestamp="1603526383947">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1050" y="223" width="596" height="594" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603526383947" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/request/index.js</url>
+          <line>34</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/store/index.js</url>
+          <line>65</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

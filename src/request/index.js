@@ -20,13 +20,13 @@ service.interceptors.request.use(config => {
   Promise.reject(error)
 })
 
-// respone拦截器
+// respone拦截器  拦截响应
 service.interceptors.response.use(
   response => {
 
     //全局统一处理 Session超时
     if (response.headers['session_time_out'] == 'timeout') {
-      store.dispatch('fedLogOut')
+      store.dispatch('fedLogOut')//分发store中的Action  把store和Token的数据清除
     }
 
     const res = response.data;
@@ -65,6 +65,7 @@ service.interceptors.response.use(
 
       return Promise.reject(res.msg);
     } else {
+      // res.code === 0 成功响应
       return response.data;
     }
   },
