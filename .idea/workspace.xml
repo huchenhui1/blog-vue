@@ -19,15 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="理解/request /router /store中js代码的作用，并加注释">
+    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="尝试把首页显示文章列表和后端对接">
+      <change afterPath="$PROJECT_DIR$/README.assets/image-20201025133221421.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/image-20201025133321591.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/image-20201025133340727.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/image-20201025133409216.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/article/ArticleItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/article/ArticleItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/CardArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardArticle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/common/ArticleScrollPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common/ArticleScrollPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603455807708</updated>
-      <workItem from="1603455809081" duration="22421000" />
+      <workItem from="1603455809081" duration="24109000" />
     </task>
     <task id="LOCAL-00001" summary="理解/request /router /store中js代码的作用，并加注释">
       <created>1603533172744</created>
@@ -78,7 +76,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603533172744</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="首页，最新文章卡片，完成对接">
+      <created>1603551245961</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603551245961</updated>
+    </task>
+    <task id="LOCAL-00003" summary="尝试把首页显示文章列表和后端对接">
+      <created>1603551350826</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603551350826</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,29 +109,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="理解/request /router /store中js代码的作用，并加注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="理解/request /router /store中js代码的作用，并加注释" />
+    <MESSAGE value="首页，最新文章卡片，完成对接" />
+    <MESSAGE value="尝试把首页显示文章列表和后端对接" />
+    <option name="LAST_COMMIT_MESSAGE" value="尝试把首页显示文章列表和后端对接" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603458301121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603458301121" />
-    <state width="949" height="193" key="GridCell.Tab.0.bottom" timestamp="1603543291821">
+    <state width="949" height="193" key="GridCell.Tab.0.bottom" timestamp="1603551367884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603543291821" />
-    <state width="949" height="193" key="GridCell.Tab.0.center" timestamp="1603543291821">
+    <state width="949" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603551367884" />
+    <state width="949" height="193" key="GridCell.Tab.0.center" timestamp="1603551367884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603543291821" />
-    <state width="949" height="193" key="GridCell.Tab.0.left" timestamp="1603543291821">
+    <state width="949" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603551367884" />
+    <state width="949" height="193" key="GridCell.Tab.0.left" timestamp="1603551367884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603543291821" />
-    <state width="949" height="193" key="GridCell.Tab.0.right" timestamp="1603543291821">
+    <state width="949" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603551367884" />
+    <state width="949" height="193" key="GridCell.Tab.0.right" timestamp="1603551367884">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603543291821" />
+    <state width="949" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603551367884" />
     <state width="949" height="339" key="GridCell.Tab.1.bottom" timestamp="1603533183793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,10 +186,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603504544558" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1603533390426">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1603551352417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603533390426" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603551352417" />
     <state x="1050" y="223" width="596" height="594" key="find.popup" timestamp="1603549910034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
