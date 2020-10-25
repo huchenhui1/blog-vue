@@ -87,11 +87,11 @@
 
 2. 安装Element插件，默认设置
 
-   ![image-20201025133321591](E:\VueProjects\blog-app\README.assets\image-20201025133321591.png)
+   ![image-20201025133321591](README.assets\image-20201025133321591.png)
 
 3. 用WebStore打开项目，`npm run serve`运行项目
 
-   ![image-20201025133340727](E:\VueProjects\blog-app\README.assets\image-20201025133340727.png)
+   ![image-20201025133340727](README.assets\image-20201025133340727.png)
 
 ### 博客前端项目Git仓库
 
@@ -136,9 +136,11 @@
 
 以首页`http://localhost:8080/#//`为例
 
-![image-20201025133409216](E:\VueProjects\blog-app\README.assets\image-20201025133409216.png)
+![image-20201025133409216](README.assets\image-20201025133409216.png)
 
 ### Vue文件
 
 ### 每次访问页面发生的事情，几个JS文件的作用
+
+
 
