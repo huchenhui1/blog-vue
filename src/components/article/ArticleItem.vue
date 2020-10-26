@@ -6,7 +6,7 @@
 <!--      标题-->
       <a @click="view(article.article_id)" class="me-article-title">{{article.article_title}}</a>
 <!--      <el-button v-if="weight > 0" class="me-article-icon" type="text">置顶</el-button>-->
-<!--      评论数 位置不知道在哪-->
+<!--      评论数 显示位置设置不知道在哪-->
       <span class="me-pull-right me-article-count">
 	    	<i class="me-icon-comment"></i>&nbsp;{{article.article_commentcount}}
 	    </span>
@@ -95,6 +95,11 @@
     font-size: 13px;
     line-height: 24px;
     margin-bottom: 10px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
   }
 
   .me-article-author {
