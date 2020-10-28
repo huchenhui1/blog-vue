@@ -5,16 +5,16 @@
         <el-tabs v-model="activeName">
           <el-tab-pane label="文章分类" name="category">
             <ul class="me-allct-items">
-              <li v-for="c in categorys" @click="view(c.id)" :key="c.id" class="me-allct-item">
+              <li v-for="c in categorys" @click="view(c.category_id)" :key="c.id" class="me-allct-item">
                 <div class="me-allct-content">
                   <a class="me-allct-info">
                     <img class="me-allct-img" :src="c.avatar?c.avatar:defaultAvatar"/>
-                    <h4 class="me-allct-name">{{c.categoryname}}</h4>
-                    <p class="me-allct-description">{{c.description}}</p>
+                    <h4 class="me-allct-name">{{c.category_name}}</h4>
+                    <p class="me-allct-description">{{c.category_description}}</p>
                   </a>
 
                   <div class="me-allct-meta">
-                    <span>{{c.articles}} 文章</span>
+                    <span>{{c.articles.length}} 文章</span>
                   </div>
                 </div>
               </li>
@@ -22,15 +22,15 @@
           </el-tab-pane>
           <el-tab-pane label="标签" name="tag">
             <ul class="me-allct-items">
-              <li v-for="t in tags" @click="view(t.id)" :key="t.id" class="me-allct-item">
+              <li v-for="t in tags" @click="view(t.tag_id)" :key="t.id" class="me-allct-item">
                 <div class="me-allct-content">
                   <a class="me-allct-info">
                     <img class="me-allct-img" :src="t.avatar?t.avatar:defaultAvatar"/>
-                    <h4 class="me-allct-name">{{t.tagname}}</h4>
+                    <h4 class="me-allct-name">{{t.tag_name}}</h4>
                   </a>
 
                   <div class="me-allct-meta">
-                    <span>{{t.articles}}  文章</span>
+                    <span>{{t.articles.length}}  文章</span>
                   </div>
                 </div>
               </li>
@@ -56,8 +56,8 @@
     data() {
       return {
         defaultAvatar:defaultAvatar,
-        categorys: [],
-        tags: [],
+        categorys: {},
+        tags: {},
         currentActiveName: 'category'
       }
     },

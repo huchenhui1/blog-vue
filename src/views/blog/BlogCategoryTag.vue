@@ -5,16 +5,16 @@
         <div class="me-ct-title me-area">
           <template v-if="this.$route.params.type === 'tag'">
             <img class="me-ct-picture" :src="ct.avatar?ct.avatar:defaultAvatar"/>
-            <h3 class="me-ct-name">{{ct.tagname}}</h3>
+            <h3 class="me-ct-name">{{ct.tag_name}}</h3>
           </template>
 
           <template v-else>
             <img class="me-ct-picture" :src="ct.avatar?ct.avatar:defaultAvatar"/>
-            <h3 class="me-ct-name">{{ct.categoryname}}</h3>
+            <h3 class="me-ct-name">{{ct.category_name}}</h3>
             <p>{{ct.description}}</p>
           </template>
 
-          <span class="me-ct-meta">{{ct.articles}} 文章</span>
+          <span class="me-ct-meta">{{ct.articles.length}} 文章</span>
         </div>
 
         <div class="me-ct-articles">
@@ -50,7 +50,17 @@
           query: {
             tagId: '',
             categoryId: ''
-          }
+          },
+          article_id:'',
+          article_title:'',
+          article_content:'',
+          create_time:'',
+          update_time:'',
+          article_viewcount: '',
+          article_commentcount: '',
+          category:{},
+          tag:{}
+
         },
       }
     },
@@ -68,9 +78,11 @@
         let type = this.$route.params.type
         if ('tag' === type) {
           this.getTagDetail(id)
+          this.getArticlesByTag(id)
           this.article.query.tagId = id
         } else {
           this.getCategoryDetail(id)
+          this.getArticlesByCategory(id)
           this.article.query.categoryId = id
         }
 
@@ -98,7 +110,8 @@
       getArticlesByCategory(id) {
         let that = this
         getArticlesByCategory(id).then(data => {
-          that.articles = data.data
+          that.article = data.data
+          console.info(this.article)
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '文章加载失败', showClose: true})
@@ -108,7 +121,7 @@
       getArticlesByTag(id) {
         let that = this
         getArticlesByTag(id).then(data => {
-          that.articles = data.data
+          that.article = data.data
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '文章加载失败', showClose: true})

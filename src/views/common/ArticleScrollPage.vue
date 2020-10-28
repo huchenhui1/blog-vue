@@ -63,7 +63,7 @@
           name: 'a.createDate',
           sort: 'desc'
         },
-        articles: [] //查询到的文章数据，传入<ArticleItem>组件
+        articles: {} //查询到的文章数据，传入<ArticleItem>组件
       }
     },
     methods: {
