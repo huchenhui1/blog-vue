@@ -55,7 +55,7 @@
           <div class="me-view-tag">
             文章分类：
             <!--<span style="font-weight: 600">{{article.category.categoryname}}</span>-->
-            <el-button @click="tagOrCategory('category', article.category.id)" size="mini" type="primary" round plain>{{article.category.category_name}}</el-button>
+            <el-button @click="tagOrCategory('category', article.category.category_id)" size="mini" type="primary" round plain>{{article.category.category_name}}</el-button>
           </div>
 
           <div class="me-view-comment">
@@ -133,7 +133,7 @@
           article_viewcount: 0,
           summary: '',
           author: {},
-          tag: {},
+          tag: [],
           category:{},
           createDate: '',
           editor: {

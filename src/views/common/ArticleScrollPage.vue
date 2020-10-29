@@ -6,6 +6,7 @@
 
 <script>
   import ArticleItem from '@/components/article/ArticleItem'
+  import {getArticlesByCategory, getArticlesByTag} from '@/api/article'
   import ScrollPage from '@/components/scrollpage'
   import {getArticles} from '@/api/article'
 
@@ -22,6 +23,7 @@
           return {}
         }
       },
+      //用于存储根据category tag 归档查询的参数
       query: {
         type: Object,
         default() {
@@ -63,7 +65,7 @@
           name: 'a.createDate',
           sort: 'desc'
         },
-        articles: {} //查询到的文章数据，传入<ArticleItem>组件
+        articles: [] //查询到的文章数据，传入<ArticleItem>组件
       }
     },
     methods: {
@@ -76,10 +78,40 @@
       //先不分页
       getArticles() {
         let that = this
+        console.info("query:"+JSON.stringify(that.query))
+        if(JSON.stringify(that.query) == "{}")
+          //要放在第一个if中，query对象中没有categoryId属性不能用query.categoryId==“”判断
+          this.getArticlesAll()
+        else if(that.query.categoryId != "")
+          //如果query对象非空，则有从BlogCategoryTag.vue得到的参数 tagId categoryId都有
+          this.getArticlesByCategory(that.query.categoryId)
+        else if(that.query.tagId != ""){
+          this.getArticlesByTag(that.query.tagId)
+        }
+      },
+      getArticlesAll() {
+        let that = this
         that.loading = true //正在加载标志位
-
         getArticles().then(data => {
 
+          let newArticles = data.data
+          if (newArticles && newArticles.length > 0) {
+            that.articles = newArticles
+          } else {
+            that.noData = true
+          }
+        }).catch(error => {
+          if (error !== 'error') {
+            that.$message({type: 'error', message: '文章加载失败!', showClose: true})
+          }
+        }).finally(() => {
+          that.loading = false //正在加载标志位置false
+        })
+      },
+      getArticlesByCategory(id) {
+        let that = this
+        that.loading = true //正在加载标志位
+        getArticlesByCategory(id).then(data => {
           let newArticles = data.data
           if (newArticles && newArticles.length > 0) {
             that.articles = newArticles
@@ -89,12 +121,29 @@
 
         }).catch(error => {
           if (error !== 'error') {
-            that.$message({type: 'error', message: '文章加载失败!', showClose: true})
+            that.$message({type: 'error', message: '文章加载失败', showClose: true})
           }
         }).finally(() => {
           that.loading = false //正在加载标志位置false
         })
-
+      },
+      getArticlesByTag(id) {
+        let that = this
+        that.loading = true //正在加载标志位
+        getArticlesByTag(id).then(data => {
+          let newArticles = data.data
+          if (newArticles && newArticles.length > 0) {
+            that.articles = newArticles
+          } else {
+            that.noData = true
+          }
+        }).catch(error => {
+          if (error !== 'error') {
+            that.$message({type: 'error', message: '文章加载失败', showClose: true})
+          }
+        }).finally(() => {
+          that.loading = false //正在加载标志位置false
+        })
       }
       /*
       getArticles() {

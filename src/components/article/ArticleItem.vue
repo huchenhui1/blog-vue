@@ -26,7 +26,7 @@
 <!--	    	<i class="me-icon-author"></i>&nbsp;{{author.nickname}}-->
 <!--	    </span>-->
 <!--      标签-->
-      <el-tag v-for="t in article.tag" :key="t.tag_name" size="mini" type="success">{{t.tag_name}}</el-tag>
+      <el-tag @click="tagOrCategory('tag', t.id)" v-for="t in article.tag" :key="t.tag_name" size="mini" type="success">{{t.tag_name}}</el-tag>
 <!--      发布时间-->
       <span class="me-pull-right me-article-count">
 	    	<i class="el-icon-time"></i>&nbsp;{{article.article_time | format}}
@@ -61,6 +61,10 @@
       //看文章 路由转发
       view(id) {
         this.$router.push({path: `/view/${id}`})
+      },
+      //点击文章Tag标签，查看该标签下的所有文章
+      tagOrCategory(type, id) {
+        this.$router.push({path: `/${type}/${id}`})
       }
     }
   }

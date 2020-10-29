@@ -13,11 +13,12 @@
             <h3 class="me-ct-name">{{ct.category_name}}</h3>
             <p>{{ct.description}}</p>
           </template>
-
+<!--          文章数-->
           <span class="me-ct-meta">{{ct.articles.length}} 文章</span>
         </div>
 
         <div class="me-ct-articles">
+          <!--          把article.query绑定到ArticleScrollPage.vue中的props参数query，用于根据category或tag查询-->
           <article-scroll-page v-bind="article"></article-scroll-page>
         </div>
 
@@ -46,27 +47,18 @@
       return {
         defaultAvatar: defaultAvatar,
         ct: {},
+        //query用于存储根据tag categort查询的id
         article: {
           query: {
             tagId: '',
             categoryId: ''
           },
-          article_id:'',
-          article_title:'',
-          article_content:'',
-          create_time:'',
-          update_time:'',
-          article_viewcount: '',
-          article_commentcount: '',
-          category:{},
-          tag:{}
-
         },
       }
     },
     computed: {
       title() {
-        if(this.$route.params.type === 'tag'){
+        if (this.$route.params.type === 'tag') {
           return `${this.ct.tagname} - 标签 - For Fun`
         }
         return `${this.ct.categoryname} - 文章分类 - For Fun`
@@ -78,14 +70,13 @@
         let type = this.$route.params.type
         if ('tag' === type) {
           this.getTagDetail(id)
-          this.getArticlesByTag(id)
           this.article.query.tagId = id
         } else {
           this.getCategoryDetail(id)
-          this.getArticlesByCategory(id)
           this.article.query.categoryId = id
         }
-
+        // 原项目中未使用getArticlesByCategory api方法，是通过从url中的category参数，存储在article.query中，传递到ArticleScrollPage.vue，用getArticles API得到文章数据
+        // getArticles API本身就具有：分页、按类别、按标签、归档，查询文章
       },
       getCategoryDetail(id) {
         let that = this
@@ -104,27 +95,6 @@
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '标签加载失败', showClose: true})
-          }
-        })
-      },
-      getArticlesByCategory(id) {
-        let that = this
-        getArticlesByCategory(id).then(data => {
-          that.article = data.data
-          console.info(this.article)
-        }).catch(error => {
-          if (error !== 'error') {
-            that.$message({type: 'error', message: '文章加载失败', showClose: true})
-          }
-        })
-      },
-      getArticlesByTag(id) {
-        let that = this
-        getArticlesByTag(id).then(data => {
-          that.article = data.data
-        }).catch(error => {
-          if (error !== 'error') {
-            that.$message({type: 'error', message: '文章加载失败', showClose: true})
           }
         })
       }

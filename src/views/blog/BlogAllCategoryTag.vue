@@ -56,8 +56,8 @@
     data() {
       return {
         defaultAvatar:defaultAvatar,
-        categorys: {},
-        tags: {},
+        categorys: [],
+        tags: [],
         currentActiveName: 'category'
       }
     },
