@@ -2,8 +2,9 @@
   <div class="me-allct-body" v-title :data-title="categoryTagTitle" >
     <el-container class="me-allct-container">
       <el-main>
-        <el-tabs v-model="activeName">
-          <el-tab-pane label="文章分类" name="category">
+<!--        <el-tabs v-model="activeName">-->
+<!--          <el-tab-pane label="文章分类" name="category">-->
+        <template v-if="this.$route.params.type === 'category'">
             <ul class="me-allct-items">
               <li v-for="c in categorys" @click="view(c.category_id)" :key="c.id" class="me-allct-item">
                 <div class="me-allct-content">
@@ -19,8 +20,10 @@
                 </div>
               </li>
             </ul>
-          </el-tab-pane>
-          <el-tab-pane label="标签" name="tag">
+        </template>
+<!--          </el-tab-pane>-->
+<!--          <el-tab-pane label="标签" name="tag">-->
+        <template v-if="this.$route.params.type === 'tag'">
             <ul class="me-allct-items">
               <li v-for="t in tags" @click="view(t.tag_id)" :key="t.id" class="me-allct-item">
                 <div class="me-allct-content">
@@ -35,8 +38,9 @@
                 </div>
               </li>
             </ul>
-          </el-tab-pane>
-        </el-tabs>
+        </template>
+<!--          </el-tab-pane>-->
+<!--        </el-tabs>-->
       </el-main>
     </el-container>
   </div>
@@ -58,25 +62,25 @@
         defaultAvatar:defaultAvatar,
         categorys: [],
         tags: [],
-        currentActiveName: 'category'
+        currentActiveName: this.$route.params.type
       }
     },
     computed: {
-      activeName: {
-        get() {
-          return (this.currentActiveName = this.$route.params.type)
-        },
-        set(newValue) {
-          this.currentActiveName = newValue
-        }
-      },
-      categoryTagTitle (){
-        if(this.currentActiveName == 'category'){
-          return '文章分类 - For Fun'
-        }
-        console.info('dddd')
-        return '标签 - For Fun'
-      }
+      // activeName: {
+      //   get() {
+      //     return (this.currentActiveName = this.$route.params.type)
+      //   },
+      //   set(newValue) {
+      //     this.currentActiveName = newValue
+      //   }
+      // },
+      // categoryTagTitle (){
+      //   if(this.currentActiveName == 'category'){
+      //     return '文章分类 - For Fun'
+      //   }
+      //   console.info('dddd')
+      //   return '标签 - For Fun'
+      // }
     },
     methods: {
       view(id) {
