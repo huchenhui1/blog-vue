@@ -11,11 +11,11 @@
       <el-aside>
 
         <card-me class="me-area"></card-me>
-        <card-tag :tags="hotTags"></card-tag>
+<!--        <card-tag :tags="hotTags"></card-tag>-->
 
         <card-article cardHeader="最热文章" :articles="hotArticles"></card-article>
 
-        <card-archive cardHeader="文章归档" :archives="archives"></card-archive>
+<!--        <card-archive cardHeader="文章归档" :archives="archives"></card-archive>-->
 
         <card-article cardHeader="最新文章" :articles="newArticles"></card-article>
 
@@ -42,8 +42,8 @@
     created() {
       this.getHotArtices()
       this.getNewArtices()
-      this.getHotTags()
-      this.listArchives()
+      // this.getHotTags()
+      // this.listArchives()
     },
     data() {
       return {

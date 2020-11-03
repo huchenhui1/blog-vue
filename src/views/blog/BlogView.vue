@@ -49,7 +49,7 @@
           <div class="me-view-tag">
             标签：
             <!--<el-tag v-for="t in article.tags" :key="t.id" class="me-view-tag-item" size="mini" type="success">{{t.tagname}}</el-tag>-->
-            <el-button @click="tagOrCategory('tag', t.id)" size="mini" type="primary" v-for="t in article.tag" :key="t.id" round plain>{{t.tag_name}}</el-button>
+            <el-button @click="tagOrCategory('tag', t.tag_id)" size="mini" type="primary" v-for="t in article.tag" :key="t.tag_id" round plain>{{t.tag_name}}</el-button>
           </div>
 
           <div class="me-view-tag">

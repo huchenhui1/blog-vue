@@ -36,22 +36,22 @@
                  custom-class="me-dialog">
 
         <el-form :model="articleForm" ref="articleForm" :rules="rules">
-          <el-form-item prop="summary">
-            <el-input type="textarea"
-                      v-model="articleForm.summary"
-                      :rows="6"
-                      placeholder="请输入摘要">
-            </el-input>
-          </el-form-item>
+<!--          <el-form-item prop="summary">-->
+<!--            <el-input type="textarea"-->
+<!--                      v-model="articleForm.summary"-->
+<!--                      :rows="6"-->
+<!--                      placeholder="请输入摘要">-->
+<!--            </el-input>-->
+<!--          </el-form-item>-->
           <el-form-item label="文章分类" prop="category">
-            <el-select v-model="articleForm.category" value-key="id" placeholder="请选择文章分类">
-              <el-option v-for="c in categorys" :key="c.id" :label="c.categoryname" :value="c"></el-option>
+            <el-select v-model="articleForm.category" value-key="category_id" placeholder="请选择文章分类">
+              <el-option v-for="c in categorys" :key="c.category_id" :label="c.category_name" :value="c.category_id"></el-option>
             </el-select>
           </el-form-item>
 
           <el-form-item label="文章标签" prop="tags">
             <el-checkbox-group v-model="articleForm.tags">
-              <el-checkbox v-for="t in tags" :key="t.id" :label="t.id" name="tags">{{t.tagname}}</el-checkbox>
+              <el-checkbox v-for="t in tags" :key="t.tag_id" :label="t.tag_id" name="tags">{{t.tag_name}}</el-checkbox>
             </el-checkbox-group>
           </el-form-item>
         </el-form>
@@ -148,6 +148,7 @@
       }
     },
     methods: {
+      //有什么用
       getArticleById(id) {
         let that = this
         getArticleById(id).then(data => {
@@ -194,19 +195,20 @@
           if (valid) {
 
             let tags = this.articleForm.tags.map(function (item) {
-              return {id: item};
+              return {tag_id: item};
             });
 
             let article = {
               id: this.articleForm.id,
-              title: this.articleForm.title,
-              summary: this.articleForm.summary,
-              category: this.articleForm.category,
-              tags: tags,
-              body: {
-                content: this.articleForm.editor.value,
-                contentHtml: this.articleForm.editor.ref.d_render
-              }
+              article_title: this.articleForm.title,
+              // summary: this.articleForm.summary,
+              category: {category_id:this.articleForm.category},
+              tag: tags,
+              article_content:this.articleForm.editor.ref.d_render
+              // body: {
+              //   content: this.articleForm.editor.value,
+              //   contentHtml: this.articleForm.editor.ref.d_render
+              // }
 
             }
 
@@ -220,7 +222,7 @@
             publishArticle(article).then((data) => {
               loading.close();
               that.$message({message: '发布成功啦', type: 'success', showClose: true})
-              that.$router.push({path: `/view/${data.data.articleId}`})
+              that.$router.push({path: `/view/${data.data.article_id}`})
 
             }).catch((error) => {
               loading.close();

@@ -27,7 +27,7 @@ const router = new Router({
       component: r => require.ensure([], () => r(require('@/views/blog/BlogWrite')), 'blogwrite'),
       //自定义obj，需要登录才能进入/write页面，相当于路由拦截
       meta: {
-        requireLogin: true
+        requireLogin: false
       },
     },
     {
@@ -109,7 +109,7 @@ router.beforeEach((to, from, next) => {
       Message({
         type: 'warning',
         showClose: true,
-        message: '请先登录哦'
+        message: '登录哦'
       })
     }
     //否则进入的页面不需要登录权限，直接允许进入路由
