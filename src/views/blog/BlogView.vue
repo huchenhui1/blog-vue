@@ -84,19 +84,21 @@
                 </el-col>
               </el-row>
             </div>
-
+<!--分                                      割                                                线-->
             <div class="me-view-comment-title">
-              <span>{{article.commentCounts}} 条评论</span>
+              <span>{{article.article_commentcount}} 条评论</span>
             </div>
+
+
 
             <commment-item
               v-for="(c,index) in comments"
               :comment="c"
-              :articleId="article.id"
+              :articleId="article.article_id"
               :index="index"
               :rootCommentCounts="comments.length"
               @commentCountsIncrement="commentCountsIncrement"
-              :key="c.id">
+              :key="c.comment_id">
             </commment-item>
 
           </div>
@@ -113,7 +115,6 @@
   import CommmentItem from '@/components/comment/CommentItem'
   import {viewArticle} from '@/api/article'
   import {getCommentsByArticle, publishComment} from '@/api/comment'
-
   import default_avatar from '@/assets/img/default_avatar.png'
 
   export default {
@@ -203,8 +204,10 @@
       },
       getCommentsByArticle() {
         let that = this
-        getCommentsByArticle(that.article.id).then(data => {
+        // alert("I am an alert box!!")
+        getCommentsByArticle(that.article.article_id).then(data => {
           that.comments = data.data
+          //alert("I am an alert box!!")
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '评论加载失败', showClose: true})

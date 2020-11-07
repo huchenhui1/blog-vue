@@ -1,19 +1,21 @@
 <template>
   <div class="me-view-comment-item">
     <div class="me-view-comment-author">
-      <a class="">
-        <img class="me-view-picture" :src="comment.author.avatar"></img>
-      </a>
+<!--      <a class="">-->
+<!--        <img class="me-view-picture" :src="comment.author.avatar"></img>-->
+<!--      </a>-->
       <div class="me-view-info">
-        <span class="me-view-nickname">{{comment.author.nickname}}</span>
+
+<!--        <span class="me-view-nickname">{{comment.author.nickname}}</span>-->
+
         <div class="me-view-meta">
           <span>{{rootCommentCounts - index}}楼</span>
-          <span>{{comment.createDate | format}}</span>
+          <span>{{comment.create_time | format}}</span>
         </div>
       </div>
     </div>
     <div>
-      <p class="me-view-comment-content">{{comment.content}}</p>
+      <p class="me-view-comment-content">{{comment.comment_content}}</p>
       <div class="me-view-comment-tools">
         <!--<a class="me-view-comment-tool">-->
         <!--<i class="el-icon-caret-top"></i> 20-->
@@ -24,17 +26,18 @@
       </div>
 
       <div class="me-reply-list">
-        <div class="me-reply-item" v-for="c in comment.childrens" :key="c.id">
+        <div class="me-reply-item" v-for="c in comment.childrens" :key="c.comment_id">
           <div style="font-size: 14px">
-            <span class="me-reply-user">{{c.author.nickname}}:&nbsp;&nbsp;</span>
+<!--            <span class="me-reply-user">{{c.author.nickname}}:&nbsp;&nbsp;</span>-->
 
-            <span v-if="c.level == 2" class="me-reply-user">@{{c.toUser.nickname}} </span>
+<!--            <span v-if="c.level == 2" class="me-reply-user">@{{c.toUser.nickname}} </span>-->
 
-            <span>{{c.content}}</span>
+            <span>{{c.comment_content}}</span>
           </div>
           <div class="me-view-meta">
-            <span style="padding-right: 10px">{{c.createDate | format}}</span>
-            <a class="me-view-comment-tool" @click="showComment(c.id, c.author)">
+            <span style="padding-right: 10px">{{c.create_time | format}}</span>
+<!--            <a class="me-view-comment-tool" @click="showComment(c.id, c.author)">-->
+              <a class="me-view-comment-tool" @click="showComment(c.comment_id, c.user_id)">
               <i class="me-icon-comment"></i>&nbsp;回复
             </a>
           </div>
@@ -64,7 +67,7 @@
 
 <script>
   import {publishComment} from '@/api/comment'
-
+//从父组件BlogView中传来的参数
   export default {
     name: "CommentItem",
     props: {
@@ -128,7 +131,7 @@
             id: this.articleId
           },
           parent: {
-            id: this.comment.id
+            id: this.comment.comment_id
           },
           toUser: '',
           content: ''

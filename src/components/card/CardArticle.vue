@@ -5,7 +5,8 @@
     </div>
 
     <ul class="me-category-list">
-      <li v-for="a in articles" @click="view(a.article_id)" :style="itemStyle" :key="a.article_id" class="me-category-item"><a>{{a.article_title}}</a>
+      <li v-for="a in articles" @click="view(a.article_id)" :style="itemStyle" :key="a.article_id" class="me-category-item">
+        <a>{{a.article_title}}</a>
       </li>
     </ul>
   </el-card>
