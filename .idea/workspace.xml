@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="1.增加ArticleItem.vue中能点击tag跳转到包含该tag的文章列表；修复查看文章页面点击tag跳转有问题&#10;2.BlogCategoryTag.vue中的getArticlesByCategory getArticlesByTag方法移动到ArticleScrollPage.vue中，在ArticleScrollPage根据query参数获取数据">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/article/ArticleItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/article/ArticleItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/CardArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardArticle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/comment/CommentItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comment/CommentItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/blog/BlogView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/blog/BlogView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/common/ArticleScrollPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common/ArticleScrollPage.vue" afterDir="false" />
-    </list>
+    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="1.增加blog-view下的评论显示" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/blog-vue-springboot-master/blog-app" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.start">
@@ -85,7 +76,7 @@
       <workItem from="1604662757084" duration="4364000" />
       <workItem from="1604667197657" duration="694000" />
       <workItem from="1604667921145" duration="3460000" />
-      <workItem from="1604714092371" duration="6915000" />
+      <workItem from="1604714092371" duration="7238000" />
     </task>
     <task id="LOCAL-00001" summary="理解/request /router /store中js代码的作用，并加注释">
       <created>1603533172744</created>
@@ -150,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604303663218</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1.增加blog-view下的评论显示">
+      <created>1604723288390</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604723288390</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +184,8 @@
     <MESSAGE value="1.去除footer栏&#10;2.完成首页文章卡片数据对接，Tag未对接。（props参数直接改为article:Object扔进ArticleItem）&#10;3.文章卡片改css实现文章只要显示两行省略号" />
     <MESSAGE value="1.增加ArticleItem.vue中能点击tag跳转到包含该tag的文章列表；修复查看文章页面点击tag跳转有问题&#10;2.BlogCategoryTag.vue中的getArticlesByCategory getArticlesByTag方法移动到ArticleScrollPage.vue中，在ArticleScrollPage根据query参数获取数据" />
     <MESSAGE value="删去了查看所有category、tag页面的重复菜单栏" />
-    <option name="LAST_COMMIT_MESSAGE" value="删去了查看所有category、tag页面的重复菜单栏" />
+    <MESSAGE value="1.增加blog-view下的评论显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.增加blog-view下的评论显示" />
   </component>
   <component name="WindowStateProjectService">
     <state x="623" y="300" key="#Web_Browsers" timestamp="1604666339324">
@@ -269,14 +268,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1173" height="433" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604667899296" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1604666677406">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1604723505624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604666677406" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604304378427">
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604723505624" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604723333844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604304378427" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604723333844" />
     <state x="764" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604662772438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
