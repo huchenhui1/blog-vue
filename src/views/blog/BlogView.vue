@@ -126,6 +126,7 @@
     watch: {
       '$route': 'getArticle'
     },
+    inject:['reload'],
     data() {
       return {
         article: {
@@ -200,9 +201,8 @@
           that.comments.unshift(data.data)
           that.commentCountsAndViewCountsIncrement()
           that.comment.comment_content = ''
-        //  that.$router.push({path: `/view/${data.data.article.article_id}`})
-        //  新增评论后会打乱评论的顺序，暂时以强制刷新页面的方式解决
-          this.$router.go(0);
+          //刷新页面
+          this.reload();
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '评论失败', showClose: true})
