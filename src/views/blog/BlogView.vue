@@ -70,9 +70,9 @@
                   <el-input
                     type="textarea"
                     :autosize="{ minRows: 2}"
-                    placeholder="你的评论..."
+                    placeholder="你的评论...3"
                     class="me-view-comment-text"
-                    v-model="comment.content"
+                    v-model="comment.comment_content"
                     resize="none">
                   </el-input>
                 </el-col>
@@ -80,7 +80,7 @@
 
               <el-row :gutter="20">
                 <el-col :span="2" :offset="22">
-                  <el-button type="text" @click="publishComment()">评论</el-button>
+                  <el-button type="text" @click="publishComment()">评论4</el-button>
                 </el-col>
               </el-row>
             </div>
@@ -90,16 +90,17 @@
             </div>
 
 
-
+<!--        最久远的评论从1楼开始-->
             <commment-item
-              v-for="(c,index) in comments"
+              v-for="(c,index) in reverseData"
               :comment="c"
               :articleId="article.article_id"
               :index="index"
               :rootCommentCounts="comments.length"
-              @commentCountsIncrement="commentCountsIncrement"
+              @commentCountsAndViewCountsIncrement="commentCountsAndViewCountsIncrement"
               :key="c.comment_id">
             </commment-item>
+
 
           </div>
 
@@ -152,6 +153,9 @@
       }
     },
     computed: {
+      reverseData() {
+        return this.comments.reverse();
+      },
       avatar() {
         let avatar = this.$store.state.avatar
 
@@ -186,16 +190,19 @@
       },
       publishComment() {
         let that = this
-        if (!that.comment.content) {
+        if (!that.comment.comment_content) {
           return;
         }
-        that.comment.article.id = that.article.id
+        that.comment.article.article_id = that.article.article_id
 
         publishComment(that.comment).then(data => {
           that.$message({type: 'success', message: '评论成功', showClose: true})
           that.comments.unshift(data.data)
-          that.commentCountsIncrement()
-          that.comment.content = ''
+          that.commentCountsAndViewCountsIncrement()
+          that.comment.comment_content = ''
+        //  that.$router.push({path: `/view/${data.data.article.article_id}`})
+        //  新增评论后会打乱评论的顺序，暂时以强制刷新页面的方式解决
+          this.$router.go(0);
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '评论失败', showClose: true})
@@ -204,18 +211,17 @@
       },
       getCommentsByArticle() {
         let that = this
-        // alert("I am an alert box!!")
         getCommentsByArticle(that.article.article_id).then(data => {
           that.comments = data.data
-          //alert("I am an alert box!!")
         }).catch(error => {
           if (error !== 'error') {
             that.$message({type: 'error', message: '评论加载失败', showClose: true})
           }
         })
       },
-      commentCountsIncrement() {
-        this.article.commentCounts += 1
+      commentCountsAndViewCountsIncrement() {
+        this.article.article_commentcount += 1
+        this.article.article_viewcount+=101
       }
     },
     components: {

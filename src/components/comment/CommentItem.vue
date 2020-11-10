@@ -21,7 +21,7 @@
         <!--<i class="el-icon-caret-top"></i> 20-->
         <!--</a>-->
         <a class="me-view-comment-tool" @click="showComment(-1)">
-          <i class="me-icon-comment"></i>&nbsp; 评论
+          <i class="me-icon-comment"></i>&nbsp; 评论1
         </a>
       </div>
 
@@ -78,7 +78,7 @@
     },
     data() {
       return {
-        placeholder: '你的评论...',
+        placeholder: '你的评论...1',
         commentShow: false,
         commentShowIndex: '',
         reply: this.getEmptyReply()
@@ -94,7 +94,7 @@
             this.placeholder = `@${toUser.nickname} `
             this.reply.toUser = toUser
           } else {
-            this.placeholder = '你的评论...'
+            this.placeholder = '你的评论...2'
           }
 
           this.commentShow = true
