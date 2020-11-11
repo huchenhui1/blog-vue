@@ -20,9 +20,9 @@
         <!--<a class="me-view-comment-tool">-->
         <!--<i class="el-icon-caret-top"></i> 20-->
         <!--</a>-->
-        <a class="me-view-comment-tool" @click="showComment(-1)">
-          <i class="me-icon-comment"></i>&nbsp; 评论1
-        </a>
+<!--        <a class="me-view-comment-tool" @click="showComment(-1)">-->
+<!--          <i class="me-icon-comment"></i>&nbsp; 评论1-->
+<!--        </a>-->
       </div>
 
       <div class="me-reply-list">

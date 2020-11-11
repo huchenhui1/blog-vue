@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="在前端增加评论文章的功能">
+    <list default="true" id="5035d933-8f75-4bf4-87b0-0af9cea34fd8" name="Default Changelist" comment="新增评论后自动刷新界面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/comment/CommentItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comment/CommentItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/blog/BlogView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/blog/BlogView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +85,8 @@
       <workItem from="1604723622650" duration="5942000" />
       <workItem from="1604908038331" duration="7601000" />
       <workItem from="1604973106822" duration="13129000" />
+      <workItem from="1605008722245" duration="3052000" />
+      <workItem from="1605083650174" duration="291000" />
     </task>
     <task id="LOCAL-00001" summary="理解/request /router /store中js代码的作用，并加注释">
       <created>1603533172744</created>
@@ -170,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604980197440</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="新增评论后自动刷新界面">
+      <created>1605009003261</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605009003261</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +217,8 @@
     <MESSAGE value="删去了查看所有category、tag页面的重复菜单栏" />
     <MESSAGE value="1.增加blog-view下的评论显示" />
     <MESSAGE value="在前端增加评论文章的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="在前端增加评论文章的功能" />
+    <MESSAGE value="新增评论后自动刷新界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增评论后自动刷新界面" />
   </component>
   <component name="WindowStateProjectService">
     <state x="623" y="300" key="#Web_Browsers" timestamp="1604666339324">
@@ -219,30 +229,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="595" y="199" width="1092" height="841" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604667112969" />
-    <state x="68" y="15" width="1736" height="1002" key="DiffContextDialog" timestamp="1604998683129">
+    <state x="68" y="15" width="1736" height="1002" key="DiffContextDialog" timestamp="1605010653793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="68" y="15" width="1736" height="1002" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604998683129" />
+    <state x="68" y="15" width="1736" height="1002" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605010653793" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1603949598508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603949598508" />
-    <state width="594" height="261" key="GridCell.Tab.0.bottom" timestamp="1605008451920">
+    <state width="1106" height="87" key="GridCell.Tab.0.bottom" timestamp="1605013498660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="594" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605008451920" />
-    <state width="594" height="261" key="GridCell.Tab.0.center" timestamp="1605008451920">
+    <state width="1106" height="87" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605013498660" />
+    <state width="1106" height="87" key="GridCell.Tab.0.center" timestamp="1605013498660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="594" height="261" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605008451920" />
-    <state width="594" height="261" key="GridCell.Tab.0.left" timestamp="1605008451920">
+    <state width="1106" height="87" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605013498660" />
+    <state width="1106" height="87" key="GridCell.Tab.0.left" timestamp="1605013498660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="594" height="261" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605008451920" />
-    <state width="594" height="261" key="GridCell.Tab.0.right" timestamp="1605008451920">
+    <state width="1106" height="87" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605013498660" />
+    <state width="1106" height="87" key="GridCell.Tab.0.right" timestamp="1605013498660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="594" height="261" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605008451920" />
+    <state width="1106" height="87" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605013498660" />
     <state width="1173" height="433" key="GridCell.Tab.1.bottom" timestamp="1604667899296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -295,10 +305,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604723505624" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604980201882">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605009008970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604980201882" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605009008970" />
     <state x="764" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604998430066">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

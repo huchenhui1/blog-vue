@@ -70,7 +70,7 @@
                   <el-input
                     type="textarea"
                     :autosize="{ minRows: 2}"
-                    placeholder="你的评论...3"
+                    placeholder="你的评论..."
                     class="me-view-comment-text"
                     v-model="comment.comment_content"
                     resize="none">
@@ -80,7 +80,7 @@
 
               <el-row :gutter="20">
                 <el-col :span="2" :offset="22">
-                  <el-button type="text" @click="publishComment()">评论4</el-button>
+                  <el-button type="text" @click="publishComment()">评论</el-button>
                 </el-col>
               </el-row>
             </div>
