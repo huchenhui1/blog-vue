@@ -19,9 +19,9 @@
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/category/all">文章分类</el-menu-item>
           <el-menu-item index="/tag/all">标签</el-menu-item>
-          <el-menu-item index="/archives">文章归档</el-menu-item>
-          <el-menu-item index="/log">日志</el-menu-item>
-          <el-menu-item index="/messageBoard">留言板</el-menu-item>
+<!--          <el-menu-item index="/archives">文章归档</el-menu-item>-->
+<!--          <el-menu-item index="/log">日志</el-menu-item>-->
+<!--          <el-menu-item index="/messageBoard">留言板</el-menu-item>-->
 <!--          offset:偏离左侧的长度-->
           <el-col :span="4" :offset="4">
             <el-menu-item index="/write"><i class="el-icon-edit"></i>写文章</el-menu-item>
@@ -53,6 +53,7 @@
               </template>
 <!--           点击登出-->
               <el-menu-item index @click="logout"><i class="el-icon-back"></i>退出</el-menu-item>
+              <el-menu-item index="/console">博客管理</el-menu-item>
             </el-submenu>
           </template>
         </el-menu>
