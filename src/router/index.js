@@ -11,6 +11,11 @@ import BlogView from '@/views/blog/BlogView'
 import BlogAllCategoryTag from '@/views/blog/BlogAllCategoryTag'
 import BlogCategoryTag from '@/views/blog/BlogCategoryTag'*/
 
+import ConsoleIndex from '@/views/console/ConsoleIndex'
+import ConsoleArticle from '@/views/console/ConsoleArticle'
+import ConsoleCategory from '@/views/console/ConsoleCategory'
+import ConsoleComment from '@/views/console/ConsoleComment'
+
 import {Message} from 'element-ui';
 
 
@@ -55,6 +60,34 @@ const router = new Router({
         {
           path: '/view/:id',
           component: r => require.ensure([], () => r(require('@/views/blog/BlogView')), 'blogview')
+        },
+        //在组件中用path来导航的话，用按照定义的route先后来确定优先级，写在最后会先匹配/:type/:id这个路由
+        //应该通过name导航。element导航不知道怎么用   <router-link>有 :to属性
+        {
+          path: '/console',
+          component: ConsoleIndex,
+          name:'ConsoleIndex',
+          children: [
+            {
+              path: '',
+              redirect:"article"
+            },
+            {
+              path: 'article',
+              component: ConsoleArticle,
+              name:'ConsoleArticle'
+            },
+            {
+              path: 'category',
+              component: ConsoleCategory,
+              name:'ConsoleCategory'
+            },
+            {
+              path: 'comment',
+              component: ConsoleComment,
+              name:'ConsoleComment'
+            },
+          ]
         },
         {
           path: '/:type/all',
